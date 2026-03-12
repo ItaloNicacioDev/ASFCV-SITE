@@ -1,90 +1,645 @@
-<!-- ESTRUTURA DO SITE.-->
-  <!DOCTYPE html>
-  
- <html lang = "pt" >
-   <head>
-		<meta charset = "utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>AÇÃO SOCIAL FORTALECENDO COM VOCÊ</title>	
-		<link rel="stylesheet" href="pag inicial config/slide.css">
-   </head>
-   
-   <style>
-	body{
-		background-image: url("Background/background.jpg");  /*define tema de fundo */
-		background-size: 200%; /* para ajustar a imagem ao tamanho da tela */
-		 background-repeat: no-repeat; /* para evitar a repetição da imagem */
-		color: rgb(238, 238, 238);
-		font: normal 14pt Arial;
-	}
-	
-</style>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ação Social Fortalecendo Com Você</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-   <body>  <!-- Inicio do corpo-->
-		
-        <div class="background-image"></div>
-	 
-	  
-		<center><img src = "imagens/escudo1.jpeg" width = "1670px" height = "300px" /></center> <!--Imagem da ong -->	
-		<p>
-			<div class = "areaprincipal" >
-			<hr>
-			<h2><b>Quem somos?</b></h2>
-		
+    :root {
+      --verde-escuro: #1a3a2a;
+      --verde-medio: #2d6a4f;
+      --verde-claro: #52b788;
+      --dourado: #d4a843;
+      --creme: #f9f3e8;
+      --creme-escuro: #ede4d0;
+      --texto: #1c1c1c;
+      --texto-suave: #5a5a5a;
+      --branco: #ffffff;
+    }
 
-			</p>
-			<br/>
-			<i style="white"></i>	<p> 
-				<br><h3>Missão</h3></p></br>
-				
-				Apoiar crianças,  jovens, idosos, mulheres e famílias em situação de vulnerabilidade na defesa,na elevação  e manifestação de qualidade de vida, resgate da identidade através de ações assistênciais preventivas e promoção humana.
-				</p>
-				
-				<p>
-					<br><h3>Visão </h3></br>
-				
-				Ser reconhecida como instituição de promoção do desenvolvimento integral e harmônico da criança,  do adolescente e do jovem com integração resgate da identidade familiar e com acesso democrático a bens culturais, de educação,  a esporte e de promoção a vida.
-				</p>
-				<p>
-					<br><h3>Valores</h3></br>
-				
-				<h2>• Preservação dos valores familiares</h2> 
-				<h2>• Resgate de identidade familiar </h2>
-				<h2>• Fortalecimento de vulneráveis,  honestidade,  transparência e coerência em nossas ações e relações, respeito pela diversidade social, cultural, ambiental e econômica, valorização de sua complexidade</h2>
-				</p></i>
-			<br/>
-			</p>
-		<hr>
-		<p>
-			<hr>
-			<p>Projetos:
-				<a href="Quero Aprender.html" target="_blank"> Quero Aprender</a>
-					<hr>
-			</p>
-			
-	<p>
-	    
-	  <p style="white">
-		<hr>
-		<h3>Contato: (11)95852-8948
-	  </p>
-	  <p style="white">
-		<b>Email: ong.s.f.c.v@gmail.com - </b> <a style="white;" href= "https://mail.google.com" target="_blank"> entre em contato </a>
-	  </p>
-	  	<p style="white">
-		Facebook:<a style="white" href= "https://www.facebook.com/AcaoSocialFCV" target="_blank" > Visite nosso Facebook </a>
-		</p>
-	</P>
-	  <p style="white">
-		Instagram:<a style="white" href= "https://www.instagram.com/ong.s.f.c.v/" target="_blank"> Visite nosso Instagram </a>
-	</p>
-	
-	  </p>
-	  <hr>
-	  <a href="Pagina 2 ONG.html" target="_blank">
-	  Eventos </a>
-	</h3>
-   </body> <!--  fim do corpo-->
+    html { scroll-behavior: smooth; }
 
-   <script></script>
- </html>
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background-color: var(--creme);
+      color: var(--texto);
+      overflow-x: hidden;
+    }
+
+    /* ── HEADER ── */
+    header {
+      background: var(--verde-escuro);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .header-pattern {
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(circle at 20% 50%, rgba(82,183,136,0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(212,168,67,0.1) 0%, transparent 40%);
+      pointer-events: none;
+    }
+
+    .header-inner {
+      position: relative;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 56px 24px 68px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 18px;
+      text-align: center;
+    }
+
+    .logo-ring {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      border: 3px solid var(--dourado);
+      padding: 6px;
+      background: rgba(255,255,255,0.05);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: fadeDown 0.8s ease both;
+    }
+
+    .logo-ring img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: contain;
+    }
+
+    .logo-placeholder {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--verde-medio), var(--verde-claro));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 44px;
+    }
+
+    .header-badge {
+      display: inline-block;
+      background: var(--dourado);
+      color: var(--verde-escuro);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      padding: 5px 16px;
+      border-radius: 20px;
+      animation: fadeDown 0.8s 0.1s ease both;
+    }
+
+    .header-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 5vw, 3rem);
+      font-weight: 900;
+      color: var(--branco);
+      line-height: 1.2;
+      max-width: 700px;
+      animation: fadeDown 0.8s 0.2s ease both;
+    }
+
+    .header-title span { color: var(--verde-claro); }
+
+    .header-meta {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px 24px;
+      animation: fadeDown 0.8s 0.3s ease both;
+    }
+
+    .header-meta p {
+      color: rgba(255,255,255,0.6);
+      font-size: 0.85rem;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .header-meta p::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--dourado);
+      display: inline-block;
+      flex-shrink: 0;
+    }
+
+    /* ── NAV ── */
+    nav {
+      background: var(--branco);
+      border-bottom: 2px solid var(--creme-escuro);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+
+    .nav-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      justify-content: center;
+      gap: 4px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      display: inline-block;
+      color: var(--texto-suave);
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 500;
+      padding: 15px 16px;
+      border-bottom: 3px solid transparent;
+      transition: color 0.2s, border-color 0.2s;
+      letter-spacing: 0.3px;
+      white-space: nowrap;
+    }
+
+    nav a:hover, nav a.active {
+      color: var(--verde-medio);
+      border-bottom-color: var(--verde-claro);
+    }
+
+    /* ── MAIN ── */
+    main {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 24px 64px;
+    }
+
+    section {
+      padding: 56px 0;
+      border-bottom: 1px solid var(--creme-escuro);
+    }
+
+    section:last-child { border-bottom: none; }
+
+    .section-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--verde-claro);
+      margin-bottom: 8px;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.5rem, 3.5vw, 2.1rem);
+      font-weight: 700;
+      color: var(--verde-escuro);
+      line-height: 1.25;
+      margin-bottom: 32px;
+    }
+
+    /* ── MVV CARDS ── */
+    .mvv-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .mvv-card {
+      background: var(--branco);
+      border-radius: 20px;
+      padding: 32px 28px;
+      border: 1px solid var(--creme-escuro);
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+
+    .mvv-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      border-radius: 20px 20px 0 0;
+    }
+
+    .mvv-card.missao::before  { background: var(--verde-claro); }
+    .mvv-card.visao::before   { background: var(--dourado); }
+    .mvv-card.valores::before { background: #a78bfa; }
+
+    .mvv-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 14px 36px rgba(26,58,42,0.1);
+    }
+
+    .mvv-icon {
+      font-size: 2.2rem;
+      margin-bottom: 14px;
+    }
+
+    .mvv-titulo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--verde-escuro);
+      margin-bottom: 12px;
+    }
+
+    .mvv-texto {
+      font-size: 0.9rem;
+      line-height: 1.8;
+      color: var(--texto-suave);
+    }
+
+    /* ── VALORES LIST ── */
+    .valores-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 4px;
+    }
+
+    .valores-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.88rem;
+      line-height: 1.65;
+      color: var(--texto-suave);
+    }
+
+    .valores-list li::before {
+      content: '✦';
+      color: var(--verde-claro);
+      font-size: 0.7rem;
+      margin-top: 3px;
+      flex-shrink: 0;
+    }
+
+    /* ── PROJETOS ── */
+    .projetos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+
+    .projeto-card {
+      background: var(--branco);
+      border-radius: 18px;
+      padding: 28px 24px;
+      border: 1px solid var(--creme-escuro);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.25s, box-shadow 0.25s;
+      border-left: 4px solid var(--verde-claro);
+    }
+
+    .projeto-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(26,58,42,0.1);
+    }
+
+    .projeto-icon {
+      font-size: 2rem;
+    }
+
+    .projeto-nome {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--verde-escuro);
+    }
+
+    .projeto-desc {
+      font-size: 0.87rem;
+      color: var(--texto-suave);
+      line-height: 1.65;
+    }
+
+    .projeto-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--verde-medio);
+      margin-top: auto;
+    }
+
+    /* ── CONTATO ── */
+    .contato-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+    }
+
+    .contato-card {
+      background: var(--branco);
+      border-radius: 14px;
+      padding: 20px;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      border: 1px solid var(--creme-escuro);
+      text-decoration: none;
+      color: inherit;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+
+    .contato-card:hover {
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      transform: translateY(-3px);
+    }
+
+    .contato-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    .ci-tel  { background: #dcfce7; }
+    .ci-mail { background: #fef3c7; }
+    .ci-fb   { background: #dbeafe; }
+    .ci-ig   { background: #fce7f3; }
+
+    .contato-info strong {
+      display: block;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--texto-suave);
+      margin-bottom: 4px;
+    }
+
+    .contato-info span {
+      font-size: 0.88rem;
+      color: var(--verde-medio);
+      font-weight: 500;
+    }
+
+    /* ── EVENTOS BANNER ── */
+    .eventos-banner {
+      background: linear-gradient(135deg, var(--verde-escuro), var(--verde-medio));
+      border-radius: 20px;
+      padding: 44px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+      margin-top: 48px;
+    }
+
+    .eventos-text h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      color: var(--branco);
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .eventos-text p {
+      color: rgba(255,255,255,0.65);
+      font-size: 0.9rem;
+    }
+
+    .btn-eventos {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--dourado);
+      color: var(--verde-escuro);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.9rem;
+      padding: 14px 28px;
+      border-radius: 50px;
+      letter-spacing: 0.4px;
+      transition: transform 0.2s, box-shadow 0.2s;
+      white-space: nowrap;
+    }
+
+    .btn-eventos:hover {
+      transform: scale(1.04);
+      box-shadow: 0 8px 20px rgba(212,168,67,0.4);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--verde-escuro);
+      color: rgba(255,255,255,0.5);
+      text-align: center;
+      padding: 28px 24px;
+      font-size: 0.82rem;
+    }
+
+    footer strong { color: rgba(255,255,255,0.85); }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* ── RESPONSIVO ── */
+    @media (max-width: 640px) {
+      .mvv-grid { grid-template-columns: 1fr; }
+      .projetos-grid { grid-template-columns: 1fr; }
+      .contato-grid { grid-template-columns: 1fr 1fr; }
+      .eventos-banner { flex-direction: column; text-align: center; }
+      nav a { padding: 13px 10px; font-size: 0.8rem; }
+    }
+
+    @media (max-width: 400px) {
+      .contato-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-pattern"></div>
+    <div class="header-inner">
+      <div class="logo-ring">
+        <img src="imagens/escudo1.jpeg" alt="Logo ONG"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="logo-placeholder" style="display:none;">🤝</div>
+      </div>
+      <span class="header-badge">Organização Sem Fins Lucrativos</span>
+      <h1 class="header-title">Ação Social <span>Fortalecendo</span> Com Você</h1>
+      <div class="header-meta">
+        <p>CNPJ: &nbsp;—</p>
+        <p>Rua Martim Lumbria, 279</p>
+        <p>(11) 95852-8948</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a href="#quem-somos" class="active">Quem Somos</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#contato">Contato</a>
+      <a href="Pagina 2 ONG.html" target="_blank">Eventos</a>
+    </div>
+  </nav>
+
+  <!-- MAIN -->
+  <main>
+
+    <!-- QUEM SOMOS: Missão / Visão / Valores -->
+    <section id="quem-somos" class="reveal">
+      <p class="section-label">Sobre nós</p>
+      <h2 class="section-title">Quem Somos</h2>
+
+      <div class="mvv-grid">
+
+        <div class="mvv-card missao">
+          <div class="mvv-icon">🎯</div>
+          <div class="mvv-titulo">Missão</div>
+          <p class="mvv-texto">
+            Apoiar crianças, jovens, idosos, mulheres e famílias em situação de vulnerabilidade na defesa, elevação e manifestação de qualidade de vida, resgate da identidade através de ações assistenciais preventivas e promoção humana.
+          </p>
+        </div>
+
+        <div class="mvv-card visao">
+          <div class="mvv-icon">🔭</div>
+          <div class="mvv-titulo">Visão</div>
+          <p class="mvv-texto">
+            Ser reconhecida como instituição de promoção do desenvolvimento integral e harmônico da criança, do adolescente e do jovem com integração, resgate da identidade familiar e acesso democrático a bens culturais, educação, esporte e promoção à vida.
+          </p>
+        </div>
+
+        <div class="mvv-card valores">
+          <div class="mvv-icon">💎</div>
+          <div class="mvv-titulo">Valores</div>
+          <ul class="valores-list">
+            <li>Preservação dos valores familiares</li>
+            <li>Resgate de identidade familiar</li>
+            <li>Fortalecimento de vulneráveis</li>
+            <li>Honestidade, transparência e coerência em nossas ações</li>
+            <li>Respeito pela diversidade social, cultural, ambiental e econômica</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PROJETOS -->
+    <section id="projetos" class="reveal">
+      <p class="section-label">Nossas iniciativas</p>
+      <h2 class="section-title">Projetos</h2>
+
+      <div class="projetos-grid">
+        <a class="projeto-card" href="Quero Aprender.html" target="_blank">
+          <div class="projeto-icon">📚</div>
+          <div class="projeto-nome">Quero Aprender</div>
+          <div class="projeto-desc">Iniciativa educacional voltada ao desenvolvimento de crianças e jovens em situação de vulnerabilidade social.</div>
+          <span class="projeto-link">Saiba mais →</span>
+        </a>
+        <!-- Adicione mais projetos aqui seguindo o mesmo padrão -->
+      </div>
+
+      <!-- Eventos Banner -->
+      <div class="eventos-banner">
+        <div class="eventos-text">
+          <h3>Nossos Eventos</h3>
+          <p>Conheça as campanhas e ações que realizamos para a comunidade.</p>
+        </div>
+        <a href="Pagina 2 ONG.html" target="_blank" class="btn-eventos">Ver eventos →</a>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato" class="reveal">
+      <p class="section-label">Fale conosco</p>
+      <h2 class="section-title">Contato</h2>
+
+      <div class="contato-grid">
+
+        <div class="contato-card">
+          <div class="contato-icon ci-tel">📞</div>
+          <div class="contato-info">
+            <strong>Telefone</strong>
+            <span>(11) 95852-8948</span>
+          </div>
+        </div>
+
+        <a class="contato-card" href="https://mail.google.com" target="_blank">
+          <div class="contato-icon ci-mail">📧</div>
+          <div class="contato-info">
+            <strong>Email</strong>
+            <span>ong.s.f.c.v@gmail.com</span>
+          </div>
+        </a>
+
+        <a class="contato-card" href="https://www.facebook.com/AcaoSocialFCV" target="_blank">
+          <div class="contato-icon ci-fb">📘</div>
+          <div class="contato-info">
+            <strong>Facebook</strong>
+            <span>Ação Social FCV</span>
+          </div>
+        </a>
+
+        <a class="contato-card" href="https://www.instagram.com/ong.s.f.c.v/" target="_blank">
+          <div class="contato-icon ci-ig">📸</div>
+          <div class="contato-info">
+            <strong>Instagram</strong>
+            <span>@ong.s.f.c.v</span>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <strong>Ação Social Fortalecendo Com Você</strong><br>
+    Rua Martim Lumbria, 279 &nbsp;·&nbsp; (11) 95852-8948 &nbsp;·&nbsp; ong.s.f.c.v@gmail.com
+  </footer>
+
+  <script>
+    const reveals = document.querySelectorAll('.reveal');
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
+      });
+    }, { threshold: 0.08 });
+    reveals.forEach(el => obs.observe(el));
+  </script>
+
+</body>
+</html>
