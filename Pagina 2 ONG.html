@@ -1,115 +1,763 @@
-<html lang = "pt">
-		<head>
-			<meta charset = "utf-8">
-			<meta http-equiv="X-UA-Compatible" content="IE=edge">
-			<title>EVENTOS</title>
-			<link rel="stylesheet" href="estilo.css">
-			<link rel="stylesheet" href="scrollbar.css">
-			<link rel="stylesheet" href="background.css">
-		</head>
-		<style>
-			body{
-				background-image: url("Background/background.jpg");  /*define tema de fundo */
-				background-size: 150%; /* para ajustar a imagem ao tamanho da tela */
-     			background-repeat: no-repeat; /* para evitar a repetição da imagem */
-				color: rgb(238, 238, 238);
-				font: normal 14pt Arial;
-			}
-			
-		</style>
-		<body>  
-			<center><img src = "imagens/escudo1.jpeg" width = "1670px" height = "300px" /></center>
-			
-				<hr>
-				<div class = "areasecundaria" ></div>
-			<p>
-				Eventos atuais :
-			</p>
-			<p>
-				Arrecadação de caixas de leite/ Suco vazias
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eventos — Ação Social Fortalecendo Com Você</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-			</p>
-			<p>
-				Encerrado <b> 08/06/2023</b>
-			</p>
-			<hr>  <!--LINHA PARA SEPARAR-->
-			<h3> <!--NOVO EVENTO -->
-				<img src = "imagens eventos/campanha do agasalho.jpg" width="500px" height="500px"/><!--Cartaz do evento -->
-					<p>
-						Campampanha do Agasalho 
-					</p>
-					<p>
-						Tragam Meias
-					</p>
-					<p>
-						 Cachecois
-					</p>
-					<p>
-						Luvas
-					</p>
-					<p>
-						Meias
-					</p>
-					
-			
-			</h3>
-				<hr>
-				<br><h2> Ajudas prestadas</h2></br>
-				<div class ="slider"><!--barra de rolagem lateral-->
-					<div class="slides"><!--radio buttons-->
-						<input type="radio" name="radio-btn" id="radio1">
-						<input type="radio" name="radio-btn" id="radio2">
-						<input type="radio" name="radio-btn" id="radio3">
-						<input type="radio" name="radio-btn" id="radio4">
-					<!-- fim radio buttons-->
-					<!-- slide imagens-->
-					<div class="slide first">
-						<img src = "imagens eventos\evento.jpeg"/>
-					</div>
-					<div class="slide ">
-						<img src = "imagens eventos\evento1.jpeg"/>
-					</div>
-					<div class="slide ">
-						<img src = "imagens eventos\evento2.jpeg"/>
-					</div>
-					<div class="slide ">
-						<img src = "imagens eventos\evento3.jpeg"/>
-					</div>
-					<!-- fim slide imagens-->
-					<!-- Navigation-->
+    :root {
+      --verde-escuro: #1a3a2a;
+      --verde-medio: #2d6a4f;
+      --verde-claro: #52b788;
+      --dourado: #d4a843;
+      --creme: #f9f3e8;
+      --creme-escuro: #ede4d0;
+      --texto: #1c1c1c;
+      --texto-suave: #5a5a5a;
+      --branco: #ffffff;
+      --encerrado: #e74c3c;
+      --ativo: #27ae60;
+    }
 
-					<div class="navigation-auto">
-						<div class="auto-btn1"></div>
-						<div class="auto-btn2"></div>
-						<div class="auto-btn3"></div>
-						<div class="auto-btn4"></div>
-					</div>
-			</div>
+    html { scroll-behavior: smooth; }
 
-			<div class="manual-navigation">
-				<label for="radio1" class="manual-btn"></label>
-				<label for="radio2" class="manual-btn"></label>
-				<label for="radio3" class="manual-btn"></label>
-				<label for="radio4" class="manual-btn"></label>
-			</div>
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background-color: var(--creme);
+      color: var(--texto);
+      overflow-x: hidden;
+    }
 
-		</div>
-				
-					
-				<hr>
-				<p>
-					Endereço para doar: Rua Martim Lumbria 279
-				</p>
-				<div class="mapBox">  
-					<iframe src="https://www.google.com/maps/embed?pb=!4v1686252976532!6m8!1m7!1sFr5hiLlwxwRpBbbZ_jGGzw!2m2!1d-23.6270503101201!2d-46.47211352136861!3f327.6856838061248!4f-5.754813764367071!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-				</div><!-- localização -->
-				<p>
-					Ajude quem precisa <a href="https://mail.google.com" target="_blank">clique aqui</a>
-				</p>
-				<hr>
-		Para voltar a pagina inincial 
-		<a href="ONG.html" target="_blank">clique aqui</a>	<!--Volta para a pagina anterior-->
-		<script src ="script.js"></script>
-		</body>
-</html>
- 
+    /* ── HEADER BANNER ── */
+    header {
+      background: var(--verde-escuro);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .header-pattern {
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(circle at 15% 60%, rgba(82,183,136,0.18) 0%, transparent 50%),
+        radial-gradient(circle at 85% 30%, rgba(212,168,67,0.12) 0%, transparent 40%);
+      pointer-events: none;
+    }
+
+    .header-inner {
+      position: relative;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 48px 24px 60px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      text-align: center;
+    }
+
+    .header-banner-img {
+      width: 100%;
+      max-height: 220px;
+      object-fit: cover;
+      border-radius: 16px;
+      opacity: 0.35;
+      position: absolute;
+      inset: 0;
+      height: 100%;
+      border-radius: 0;
+    }
+
+    .logo-ring {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 3px solid var(--dourado);
+      padding: 5px;
+      background: rgba(255,255,255,0.07);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      animation: fadeDown 0.7s ease both;
+    }
+
+    .logo-ring img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: contain;
+    }
+
+    .logo-placeholder {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--verde-medio), var(--verde-claro));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 36px;
+    }
+
+    .header-badge {
+      display: inline-block;
+      background: var(--dourado);
+      color: var(--verde-escuro);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 20px;
+      position: relative;
+      animation: fadeDown 0.7s 0.1s ease both;
+    }
+
+    .header-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 5vw, 2.8rem);
+      font-weight: 900;
+      color: var(--branco);
+      line-height: 1.2;
+      position: relative;
+      animation: fadeDown 0.7s 0.15s ease both;
+    }
+
+    .header-title span { color: var(--verde-claro); }
+
+    .header-sub {
+      color: rgba(255,255,255,0.6);
+      font-size: 0.9rem;
+      position: relative;
+      animation: fadeDown 0.7s 0.2s ease both;
+    }
+
+    /* ── NAV ── */
+    nav {
+      background: var(--branco);
+      border-bottom: 2px solid var(--creme-escuro);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+
+    .nav-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      justify-content: center;
+      gap: 4px;
+    }
+
+    nav a {
+      display: inline-block;
+      color: var(--texto-suave);
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 500;
+      padding: 15px 18px;
+      border-bottom: 3px solid transparent;
+      transition: color 0.2s, border-color 0.2s;
+      letter-spacing: 0.3px;
+    }
+
+    nav a:hover, nav a.active {
+      color: var(--verde-medio);
+      border-bottom-color: var(--verde-claro);
+    }
+
+    /* ── MAIN ── */
+    main {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 24px 64px;
+    }
+
+    /* ── SECTION ── */
+    section {
+      padding: 56px 0;
+      border-bottom: 1px solid var(--creme-escuro);
+    }
+
+    section:last-child { border-bottom: none; }
+
+    .section-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--verde-claro);
+      margin-bottom: 8px;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.5rem, 3.5vw, 2rem);
+      font-weight: 700;
+      color: var(--verde-escuro);
+      line-height: 1.25;
+      margin-bottom: 28px;
+    }
+
+    /* ── STATUS BADGE ── */
+    .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 20px;
+    }
+
+    .status::before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+    }
+
+    .status.encerrado {
+      background: #fde8e8;
+      color: var(--encerrado);
+    }
+
+    .status.encerrado::before { background: var(--encerrado); }
+
+    .status.ativo {
+      background: #d4edda;
+      color: var(--ativo);
+    }
+
+    .status.ativo::before {
+      background: var(--ativo);
+      animation: pulse 1.4s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(1.3); }
+    }
+
+    /* ── EVENTO CARD ── */
+    .evento-card {
+      background: var(--branco);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 0;
+      border: 1px solid var(--creme-escuro);
+      transition: box-shadow 0.25s, transform 0.25s;
+      margin-bottom: 24px;
+    }
+
+    .evento-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 40px rgba(26,58,42,0.12);
+    }
+
+    .evento-img {
+      width: 100%;
+      height: 100%;
+      min-height: 260px;
+      object-fit: cover;
+    }
+
+    .evento-img-placeholder {
+      width: 100%;
+      min-height: 260px;
+      background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      color: var(--verde-medio);
+      font-size: 0.85rem;
+    }
+
+    .evento-img-placeholder span { font-size: 2.8rem; }
+
+    .evento-body {
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .evento-data {
+      font-size: 0.82rem;
+      color: var(--texto-suave);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .evento-titulo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--verde-escuro);
+    }
+
+    .evento-desc {
+      font-size: 0.92rem;
+      line-height: 1.75;
+      color: var(--texto-suave);
+    }
+
+    .evento-itens {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 4px;
+    }
+
+    .item-tag {
+      background: var(--creme-escuro);
+      color: var(--verde-medio);
+      font-size: 0.8rem;
+      font-weight: 500;
+      padding: 5px 12px;
+      border-radius: 20px;
+    }
+
+    /* ── LEITE EVENT (text only) ── */
+    .evento-simples {
+      background: var(--branco);
+      border-radius: 16px;
+      padding: 28px 32px;
+      border: 1px solid var(--creme-escuro);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+      transition: box-shadow 0.2s;
+    }
+
+    .evento-simples:hover {
+      box-shadow: 0 8px 24px rgba(0,0,0,0.07);
+    }
+
+    .evento-simples-left { display: flex; flex-direction: column; gap: 8px; }
+
+    .evento-simples-titulo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--verde-escuro);
+    }
+
+    .evento-simples-data {
+      font-size: 0.82rem;
+      color: var(--texto-suave);
+    }
+
+    /* ── SLIDER ── */
+    .slider-section { }
+
+    .slider-wrapper {
+      position: relative;
+      width: 100%;
+      border-radius: 20px;
+      overflow: hidden;
+      background: var(--verde-escuro);
+      aspect-ratio: 16/7;
+      box-shadow: 0 8px 32px rgba(26,58,42,0.2);
+    }
+
+    .slide-item {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      transition: opacity 0.7s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .slide-item.active { opacity: 1; }
+
+    .slide-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .slide-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      color: rgba(255,255,255,0.5);
+      font-size: 0.9rem;
+    }
+
+    .slide-placeholder span { font-size: 3rem; }
+
+    /* Dots */
+    .slider-dots {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 16px;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--creme-escuro);
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+      border: none;
+    }
+
+    .dot.active {
+      background: var(--verde-medio);
+      transform: scale(1.3);
+    }
+
+    /* Arrows */
+    .slider-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(6px);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: white;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 1.1rem;
+      z-index: 10;
+      transition: background 0.2s;
+    }
+
+    .slider-arrow:hover { background: rgba(255,255,255,0.28); }
+    .slider-arrow.prev { left: 14px; }
+    .slider-arrow.next { right: 14px; }
+
+    /* ── DOAÇÃO ── */
+    .doacao-banner {
+      background: linear-gradient(135deg, var(--verde-escuro), var(--verde-medio));
+      border-radius: 20px;
+      padding: 44px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+      margin-top: 8px;
+    }
+
+    .doacao-text h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      color: var(--branco);
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .doacao-text p {
+      color: rgba(255,255,255,0.65);
+      font-size: 0.9rem;
+    }
+
+    .btn-doe {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--dourado);
+      color: var(--verde-escuro);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.9rem;
+      padding: 14px 28px;
+      border-radius: 50px;
+      letter-spacing: 0.4px;
+      transition: transform 0.2s, box-shadow 0.2s;
+      white-space: nowrap;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-doe:hover {
+      transform: scale(1.04);
+      box-shadow: 0 8px 20px rgba(212,168,67,0.4);
+    }
+
+    /* ── ENDEREÇO + MAPA ── */
+    .endereco-mapa {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 32px;
+      align-items: start;
+      margin-top: 8px;
+    }
+
+    .endereco-info { display: flex; flex-direction: column; gap: 16px; }
+
+    .endereco-item {
+      background: var(--branco);
+      border: 1px solid var(--creme-escuro);
+      border-radius: 14px;
+      padding: 20px;
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+
+    .endereco-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: #dcfce7;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    .endereco-detail strong {
+      display: block;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--texto-suave);
+      margin-bottom: 4px;
+    }
+
+    .endereco-detail span {
+      font-size: 0.92rem;
+      color: var(--verde-escuro);
+      font-weight: 500;
+    }
+
+    .map-container {
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      border: 1px solid var(--creme-escuro);
+    }
+
+    .map-container iframe {
+      display: block;
+      width: 100%;
+      height: 340px;
+      border: none;
+    }
+
+    /* ── VOLTAR ── */
+    .voltar-bar {
+      background: var(--branco);
+      border-top: 1px solid var(--creme-escuro);
+      padding: 16px 24px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .btn-voltar {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--verde-medio);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      padding: 10px 20px;
+      border-radius: 50px;
+      border: 1.5px solid var(--verde-claro);
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .btn-voltar:hover {
+      background: var(--verde-escuro);
+      color: var(--branco);
+      border-color: var(--verde-escuro);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--verde-escuro);
+      color: rgba(255,255,255,0.5);
+      text-align: center;
+      padding: 24px;
+      font-size: 0.82rem;
+    }
+
+    footer strong { color: rgba(255,255,255,0.85); }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* ── RESPONSIVO ── */
+    @media (max-width: 700px) {
+      .evento-card { grid-template-columns: 1fr; }
+      .evento-img, .evento-img-placeholder { min-height: 200px; }
+      .endereco-mapa { grid-template-columns: 1fr; }
+      .doacao-banner { flex-direction: column; text-align: center; }
+      nav a { padding: 13px 9px; font-size: 0.78rem; }
+    }
+
+    @media (max-width: 480px) {
+      .evento-body { padding: 22px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-pattern"></div>
+    <div class="header-inner">
+      <div class="logo-ring">
+        <img src="imagens/escudo1.jpeg" alt="Logo ONG"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="logo-placeholder" style="display:none;">🤝</div>
+      </div>
+      <span class="header-badge">Ação Social Fortalecendo Com Você</span>
+      <h1 class="header-title">Nossos <span>Eventos</span></h1>
+      <p class="header-sub">Campanhas, ações e iniciativas para fortalecer a comunidade</p>
+    </div>
+  </header>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a href="ONG.html">Início</a>
+      <a href="#eventos" class="active">Eventos</a>
+      <a href="#ajudas">Ajudas Prestadas</a>
+      <a href="#local">Local</a>
+    </div>
+  </nav>
+
+  <!-- MAIN -->
+  <main>
+
+    <!-- EVENTOS -->
+    <section id="eventos" class="reveal">
+      <p class="section-label">O que está acontecendo</p>
+      <h2 class="section-title">Eventos</h2>
+
+      <!-- Evento encerrado simples -->
+      <div class="evento-simples">
+        <div class="evento-simples-left">
+          <div class="evento-simples-titulo">♻️ Arrecadação de Caixas de Leite / Suco Vazias</div>
+          <div class="evento-simples-data">Encerrado em 08/06/2023</div>
+        </div>
+        <span class="status encerrado">Encerrado</span>
+      </div>
+
+      <!-- Campanha do Agasalho -->
+      <div class="evento-card">
+        <div>
+          <img class="evento-img" src="imagens eventos/campanha do agasalho.jpg" alt="Campanha do Agasalho"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="evento-img-placeholder" style="display:none;">
+            <span>🧥</span>
+            Campanha do Agasalho
+          </div>
+        </div>
+        <div class="evento-body">
+          <span class="status ativo">Em andamento</span>
+          <div class="evento-titulo">Campanha do Agasalho</div>
+          <div class="evento-desc">
+            Ajude a aquecer quem mais precisa neste inverno! Estamos arrecadando itens de frio para distribuir às famílias em situação de vulnerabilidade.
+          </div>
+          <div>
+            <p style="font-size:0.82rem;color:var(--texto-suave);margin-bottom:8px;font-weight:500;">Itens aceitos:</p>
+            <div class="evento-itens">
+              <span class="item-tag">🧤 Luvas</span>
+              <span class="item-tag">🧣 Cachecóis</span>
+              <span class="item-tag">🧦 Meias</span>
+              <span class="item-tag">🧥 Casacos</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AJUDAS PRESTADAS / SLIDER -->
+    <section id="ajudas" class="reveal">
+      <p class="section-label">Nossas ações</p>
+      <h2 class="section-title">Ajudas Prestadas</h2>
+
+      <div class="slider-wrapper" id="slider">
+        <!-- Slides -->
+        <div class="slide-item active" data-index="0">
+          <img src="imagens eventos/evento.jpeg" alt="Evento 1"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="slide-placeholder" style="display:none;"><span>📷</span>Foto do evento 1</div>
+        </div>
+        <div class="slide-item" data-index="1">
+          <img src="imagens eventos/evento1.jpeg" alt="Evento 2"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="slide-placeholder" style="display:none;"><span>📷</span>Foto do evento 2</div>
+        </div>
+        <div class="slide-item" data-index="2">
+          <img src="imagens eventos/evento2.jpeg" alt="Evento 3"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="slide-placeholder" style="display:none;"><span>📷</span>Foto do evento 3</div>
+        </div>
+        <div class="slide-item" data-index="3">
+          <img src="imagens eventos/evento3.jpeg" alt="Evento 4"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="slide-placeholder" style="display:none;"><span>📷</span>Foto do evento 4</div>
+        </div>
+        <!-- Arrows -->
+        <button class="slider-arrow prev" onclick="changeSlide(-1)">‹</button>
+        <button class="slider-arrow next" onclick="changeSlide(1)">›</button>
+      </div>
+
+      <!-- Dots -->
+      <div class="slider-dots">
+        <button class="dot active" onclick="goToSlide(0)"></button>
+        <button class="dot" onclick="goToSlide(1)"></button>
+        <button class="dot" onclick="goToSlide(2)"></button>
+        <button class="dot" onclick="goToSlide(3)"></button>
+      </div>
+
+      <!-- CTA doação -->
+      <div class="doacao-banner" style="margin-top:40px;">
+        <div class="doacao-text">
+          <h3>Ajude quem precisa ❤️</h3>
+          <p>Sua contribuição transforma vidas. Entre em contato e saiba como colaborar.</p>
+        </div>
+        <a href="https://mail.google.com" target="_blank" class="btn-doe">Quero ajudar →</a>
+      </div>
+    </section>
+
+    <!-- LOCAL / MAPA -->
+    <section id="loc
