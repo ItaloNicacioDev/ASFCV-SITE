@@ -40,8 +40,8 @@
       position: absolute;
       inset: 0;
       background-image:
-        radial-gradient(circle at 20% 50%, rgba(82,183,136,0.15) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(212,168,67,0.1) 0%, transparent 40%);
+              radial-gradient(circle at 20% 50%, rgba(82,183,136,0.15) 0%, transparent 50%),
+              radial-gradient(circle at 80% 20%, rgba(212,168,67,0.1) 0%, transparent 40%);
       pointer-events: none;
     }
 
@@ -486,171 +486,159 @@
 </head>
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <div class="header-pattern"></div>
-    <div class="header-inner">
-      <div class="logo-ring">
-        <img src="imagens/escudo1.jpeg" alt="Logo ONG"
-          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-        <div class="logo-placeholder" style="display:none;">🤝</div>
+<header>
+  <div class="header-pattern"></div>
+  <div class="header-inner">
+    <div class="logo-ring">
+      <img src="imagens/escudo1.jpeg" alt="Logo ONG"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+      <div class="logo-placeholder" style="display:none;">🤝</div>
+    </div>
+    <span class="header-badge">Organização Sem Fins Lucrativos</span>
+    <h1 class="header-title">Ação Social <span>Fortalecendo</span> Com Você</h1>
+    <div class="header-meta">
+      <p>CNPJ: &nbsp;—</p>
+      <p>Rua Martim Lumbria, 279</p>
+      <p>(11) 95852-8948</p>
+    </div>
+  </div>
+</header>
+
+<nav>
+  <div class="nav-inner">
+    <a href="#quem-somos" class="active">Quem Somos</a>
+    <a href="#projetos">Projetos</a>
+    <a href="#contato">Contato</a>
+    <a href="eventos.html">Eventos</a>
+  </div>
+</nav>
+
+<main>
+
+  <section id="quem-somos" class="reveal">
+    <p class="section-label">Sobre nós</p>
+    <h2 class="section-title">Quem Somos</h2>
+
+    <div class="mvv-grid">
+      <div class="mvv-card missao">
+        <div class="mvv-icon">🎯</div>
+        <div class="mvv-titulo">Missão</div>
+        <p class="mvv-texto">
+          Apoiar crianças, jovens, idosos, mulheres e famílias em situação de vulnerabilidade na defesa, elevação e manifestação de qualidade de vida, resgate da identidade através de ações assistenciais preventivas e promoção humana.
+        </p>
       </div>
-      <span class="header-badge">Organização Sem Fins Lucrativos</span>
-      <h1 class="header-title">Ação Social <span>Fortalecendo</span> Com Você</h1>
-      <div class="header-meta">
-        <p>CNPJ: &nbsp;—</p>
-        <p>Rua Martim Lumbria, 279</p>
-        <p>(11) 95852-8948</p>
+
+      <div class="mvv-card visao">
+        <div class="mvv-icon">🔭</div>
+        <div class="mvv-titulo">Visão</div>
+        <p class="mvv-texto">
+          Ser reconhecida como instituição de promoção do desenvolvimento integral e harmônico da criança, do adolescente e do jovem com integração, resgate da identidade familiar e acesso democrático a bens culturais, educação, esporte e promoção à vida.
+        </p>
+      </div>
+
+      <div class="mvv-card valores">
+        <div class="mvv-icon">💎</div>
+        <div class="mvv-titulo">Valores</div>
+        <ul class="valores-list">
+          <li>Preservação dos valores familiares</li>
+          <li>Resgate de identidade familiar</li>
+          <li>Fortalecimento de vulneráveis</li>
+          <li>Honestidade, transparência e coerência em nossas ações</li>
+          <li>Respeito pela diversidade social, cultural, ambiental e econômica</li>
+        </ul>
       </div>
     </div>
-  </header>
+  </section>
 
-  <!-- NAV -->
-  <nav>
-    <div class="nav-inner">
-      <a href="#quem-somos" class="active">Quem Somos</a>
-      <a href="#projetos">Projetos</a>
-      <a href="#contato">Contato</a>
-      <a href="eventos.html" target="_blank">Eventos</a>
+  <section id="projetos" class="reveal">
+    <p class="section-label">Nossas iniciativas</p>
+    <h2 class="section-title">Projetos</h2>
+
+    <div class="projetos-grid">
+      <a class="projeto-card" href="Projetos ativos/Quero Aprender.html">
+        <div class="projeto-icon">📚</div>
+        <div class="projeto-nome">Quero Aprender</div>
+        <div class="projeto-desc">Iniciativa educacional voltada ao desenvolvimento de crianças e jovens em situação de vulnerabilidade social.</div>
+        <span class="projeto-link">Saiba mais →</span>
+      </a>
+
+      <a class="projeto-card" href="Projetos ativos/Bola no pé.html">
+        <div class="projeto-icon">⚽</div> <div class="projeto-nome">Bola no pé, Livro na mão</div>
+        <div class="projeto-desc">Iniciativa conectando crianças e jovens em situação de vulnerabilidade através do esporte e educação.</div>
+        <span class="projeto-link">Saiba mais →</span>
+      </a>
+
+      <a class="projeto-card" href="Projetos ativos/Alimento Solidario.html">
+        <div class="projeto-icon">🍲</div> <div class="projeto-nome">Alimento Solidário</div>
+        <div class="projeto-desc">Iniciativa que fornece alimentação para pessoas em situação vulnerável de rua.</div>
+        <span class="projeto-link">Saiba mais →</span>
+      </a>
     </div>
-  </nav>
 
-  <!-- MAIN -->
-  <main>
-
-    <!-- QUEM SOMOS: Missão / Visão / Valores -->
-    <section id="quem-somos" class="reveal">
-      <p class="section-label">Sobre nós</p>
-      <h2 class="section-title">Quem Somos</h2>
-
-      <div class="mvv-grid">
-
-        <div class="mvv-card missao">
-          <div class="mvv-icon">🎯</div>
-          <div class="mvv-titulo">Missão</div>
-          <p class="mvv-texto">
-            Apoiar crianças, jovens, idosos, mulheres e famílias em situação de vulnerabilidade na defesa, elevação e manifestação de qualidade de vida, resgate da identidade através de ações assistenciais preventivas e promoção humana.
-          </p>
-        </div>
-
-        <div class="mvv-card visao">
-          <div class="mvv-icon">🔭</div>
-          <div class="mvv-titulo">Visão</div>
-          <p class="mvv-texto">
-            Ser reconhecida como instituição de promoção do desenvolvimento integral e harmônico da criança, do adolescente e do jovem com integração, resgate da identidade familiar e acesso democrático a bens culturais, educação, esporte e promoção à vida.
-          </p>
-        </div>
-
-        <div class="mvv-card valores">
-          <div class="mvv-icon">💎</div>
-          <div class="mvv-titulo">Valores</div>
-          <ul class="valores-list">
-            <li>Preservação dos valores familiares</li>
-            <li>Resgate de identidade familiar</li>
-            <li>Fortalecimento de vulneráveis</li>
-            <li>Honestidade, transparência e coerência em nossas ações</li>
-            <li>Respeito pela diversidade social, cultural, ambiental e econômica</li>
-          </ul>
-        </div>
-
+    <div class="eventos-banner">
+      <div class="eventos-text">
+        <h3>Nossos Eventos</h3>
+        <p>Conheça as campanhas e ações que realizamos para a comunidade.</p>
       </div>
-    </section>
+      <a href="eventos.html" class="btn-eventos">Ver eventos →</a>
+    </div>
+  </section>
 
-    <!-- PROJETOS -->
-    <section id="projetos" class="reveal">
-      <p class="section-label">Nossas iniciativas</p>
-      <h2 class="section-title">Projetos</h2>
+  <section id="contato" class="reveal">
+    <p class="section-label">Fale conosco</p>
+    <h2 class="section-title">Contato</h2>
 
-      <div class="projetos-grid">
-        <a class="projeto-card" href="Projetos ativos/Quero Aprender.html">
-          <div class="projeto-icon">📚</div>
-          <div class="projeto-nome">Quero Aprender</div>
-          <div class="projeto-desc">Iniciativa educacional voltada ao desenvolvimento de crianças e jovens em situação de vulnerabilidade social.</div>
-          <span class="projeto-link">Saiba mais →</span>
-        </a>
-
-        <a class="projeto-card" href="Projetos ativos/Bola no pé.html">
-          <div class="projeto-icon">⚽</div> <div class="projeto-nome">Bola no pé, Livro na mão</div>
-          <div class="projeto-desc">Iniciativa educacional voltada ao desenvolvimento de crianças e jovens em situação de vulnerabilidade social conectadas pelo esporte e pela educação.</div>
-          <span class="projeto-link">Saiba mais →</span>
-        </a>
-
-        <a class="projeto-card" href="Projetos ativos/Alimento Solidario.html">
-          <div class="projeto-icon">🍲</div> <div class="projeto-nome">Alimento Solidário</div>
-          <div class="projeto-desc">Iniciativa que traz o alimento para pessoas em situação vulnerável de rua.</div>
-          <span class="projeto-link">Saiba mais →</span>
-        </a>
+    <div class="contato-grid">
+      <div class="contato-card">
+        <div class="contato-icon ci-tel">📞</div>
+        <div class="contato-info">
+          <strong>Telefone</strong>
+          <span>(11) 95852-8948</span>
+        </div>
       </div>
 
-      <!-- Eventos Banner -->
-      <div class="eventos-banner">
-        <div class="eventos-text">
-          <h3>Nossos Eventos</h3>
-          <p>Conheça as campanhas e ações que realizamos para a comunidade.</p>
+      <a class="contato-card" href="https://mail.google.com" target="_blank">
+        <div class="contato-icon ci-mail">📧</div>
+        <div class="contato-info">
+          <strong>Email</strong>
+          <span>ong.s.f.c.v@gmail.com</span>
         </div>
-        <a href="eventos.html" class="btn-eventos">Ver eventos →</a>
-      </div>
-    </section>
+      </a>
 
-    <!-- CONTATO -->
-    <section id="contato" class="reveal">
-      <p class="section-label">Fale conosco</p>
-      <h2 class="section-title">Contato</h2>
-
-      <div class="contato-grid">
-
-        <div class="contato-card">
-          <div class="contato-icon ci-tel">📞</div>
-          <div class="contato-info">
-            <strong>Telefone</strong>
-            <span>(11) 95852-8948</span>
-          </div>
+      <a class="contato-card" href="https://www.facebook.com/AcaoSocialFCV" target="_blank">
+        <div class="contato-icon ci-fb">📘</div>
+        <div class="contato-info">
+          <strong>Facebook</strong>
+          <span>Ação Social FCV</span>
         </div>
+      </a>
 
-        <a class="contato-card" href="https://mail.google.com" target="_blank">
-          <div class="contato-icon ci-mail">📧</div>
-          <div class="contato-info">
-            <strong>Email</strong>
-            <span>ong.s.f.c.v@gmail.com</span>
-          </div>
-        </a>
+      <a class="contato-card" href="https://www.instagram.com/ong.s.f.c.v/" target="_blank">
+        <div class="contato-icon ci-ig">📸</div>
+        <div class="contato-info">
+          <strong>Instagram</strong>
+          <span>@ong.s.f.c.v</span>
+        </div>
+      </a>
+    </div>
+  </section>
 
-        <a class="contato-card" href="https://www.facebook.com/AcaoSocialFCV" target="_blank">
-          <div class="contato-icon ci-fb">📘</div>
-          <div class="contato-info">
-            <strong>Facebook</strong>
-            <span>Ação Social FCV</span>
-          </div>
-        </a>
+</main>
 
-        <a class="contato-card" href="https://www.instagram.com/ong.s.f.c.v/" target="_blank">
-          <div class="contato-icon ci-ig">📸</div>
-          <div class="contato-info">
-            <strong>Instagram</strong>
-            <span>@ong.s.f.c.v</span>
-          </div>
-        </a>
+<footer>
+  <strong>Ação Social Fortalecendo Com Você</strong><br>
+  Rua Martim Lumbria, 279 &nbsp;·&nbsp; (11) 95852-8948 &nbsp;·&nbsp; ong.s.f.c.v@gmail.com
+</footer>
 
-      </div>
-    </section>
-
-  </main>
-
-  <!-- FOOTER -->
-  <footer>
-    <strong>Ação Social Fortalecendo Com Você</strong><br>
-    Rua Martim Lumbria, 279 &nbsp;·&nbsp; (11) 95852-8948 &nbsp;·&nbsp; ong.s.f.c.v@gmail.com
-  </footer>
-
-  <script>
-    const reveals = document.querySelectorAll('.reveal');
-    const obs = new IntersectionObserver(entries => {
-      entries.forEach(e => {
-        if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
-      });
-    }, { threshold: 0.08 });
-    reveals.forEach(el => obs.observe(el));
-  </script>
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
+    });
+  }, { threshold: 0.08 });
+  reveals.forEach(el => obs.observe(el));
+</script>
 
 </body>
 </html>
