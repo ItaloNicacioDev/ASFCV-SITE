@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alimento Solidário - ASFCV</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        /* ... (Utilize o mesmo CSS da primeira página) ... */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        :root {
+            --verde-escuro: #1a3a2a; --verde-medio: #2d6a4f; --verde-claro: #52b788;
+            --dourado: #d4a843; --creme: #f9f3e8; --creme-escuro: #ede4d0;
+            --texto: #1c1c1c; --texto-suave: #5a5a5a; --branco: #ffffff;
+        }
+        body { font-family: 'DM Sans', sans-serif; background-color: var(--creme); color: var(--texto); line-height: 1.6; }
+        header { background: var(--verde-escuro); position: relative; overflow: hidden; padding: 60px 24px; text-align: center; }
+        .header-pattern { position: absolute; inset: 0; background-image: radial-gradient(circle at 80% 20%, rgba(82,183,136,0.15) 0%, transparent 50%); pointer-events: none; }
+        .header-badge { display: inline-block; background: var(--dourado); color: var(--verde-escuro); font-size: 10px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; padding: 5px 16px; border-radius: 20px; margin-bottom: 15px; position: relative; }
+        .header-title { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 3.5rem); color: var(--branco); position: relative; }
+        .header-title span { color: var(--verde-claro); }
+        nav { background: var(--branco); border-bottom: 2px solid var(--creme-escuro); sticky; top: 0; z-index: 100; padding: 15px; text-align: center; }
+        nav a { color: var(--verde-medio); text-decoration: none; font-weight: 600; font-size: 0.9rem; }
+        main { max-width: 960px; margin: 0 auto; padding: 40px 24px; }
+        .hero-content { background: var(--branco); padding: 40px; border-radius: 24px; border: 1px solid var(--creme-escuro); margin-bottom: 30px; text-align: center; }
+        .icon-large { font-size: 4rem; margin-bottom: 20px; }
+        .section-title { font-family: 'Playfair Display', serif; font-size: 1.8rem; color: var(--verde-escuro); margin-bottom: 20px; }
+        .mvv-card { background: var(--branco); padding: 30px; border-radius: 20px; border-left: 5px solid #a78bfa; margin-bottom: 20px;}
+        .valores-list { list-style: none; margin-top: 20px; }
+        .valores-list li { margin-bottom: 12px; padding-left: 25px; position: relative; color: var(--texto-suave); }
+        .valores-list li::before { content: '🍲'; position: absolute; left: 0; font-size: 0.8rem; }
+        footer { background: var(--verde-escuro); color: rgba(255,255,255,0.6); text-align: center; padding: 30px; font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+<header>
+    <div class="header-pattern"></div>
+    <span class="header-badge">Combate à Fome</span>
+    <h1 class="header-title">Alimento <span>Solidário</span></h1>
+</header>
+<nav><a href="../index.html">← Voltar para a Página Inicial</a></nav>
+<main>
+    <div class="hero-content">
+        <div class="icon-large">🍲</div>
+        <h2 class="section-title">Nutrindo Esperança</h2>
+        <p>Nosso projeto de segurança alimentar atua diretamente na ponta, levando refeições preparadas e insumos básicos para famílias e indivíduos em insegurança alimentar severa.</p>
+    </div>
+    <div class="mvv-card">
+        <h3 class="section-title" style="font-size: 1.3rem;">Ação Imediata</h3>
+        <p>Diferente de projetos de longo prazo, o Alimento Solidário foca na urgência da fome. Onde há necessidade, nossa equipe se esforça para estar presente.</p>
+    </div>
+    <section>
+        <h3 class="section-title">Como atuamos</h3>
+        <ul class="valores-list">
+            <li>Distribuição de marmitas semanais para moradores de rua.</li>
+            <li>Entrega de cestas básicas para famílias cadastradas.</li>
+            <li>Campanhas especiais de Natal e datas comemorativas.</li>
+            <li>Parcerias com mercados locais para evitar o desperdício de alimentos.</li>
+        </ul>
+    </section>
+</main>
+<footer><strong>Ação Social Fortalecendo Com Você</strong></footer>
+</body>
+</html>
